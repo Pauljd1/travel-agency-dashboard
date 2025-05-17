@@ -2,7 +2,7 @@ import { cn } from "lib/utils";
 import { Link, NavLink } from "react-router";
 import { sidebarItems } from "~/constants";
 
-export const NavItems = () => {
+export const NavItems = ({ handleClick }: { handleClick?: () => void }) => {
   const user = {
     name: "Paul",
     email: "pauljd@pauldavidson.dev",
@@ -23,6 +23,7 @@ export const NavItems = () => {
                   className={cn("group nav-item", {
                     "bg-primary-100 !text-white": isActive,
                   })}
+                  onClick={handleClick}
                 >
                   <img
                     src={icon}
@@ -46,6 +47,18 @@ export const NavItems = () => {
             <h2>{user?.name}</h2>
             <p>{user?.email}</p>
           </article>
+          <button
+            onClick={() => {
+              console.log("logout");
+            }}
+            className="cursor-pointer"
+          >
+            <img
+              src="/assets/icons/logout.svg"
+              alt="logout"
+              className="size-6"
+            />
+          </button>
         </footer>
       </div>
     </section>

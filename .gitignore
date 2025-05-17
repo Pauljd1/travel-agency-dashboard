@@ -1,6 +1,38 @@
-.DS_Store
+# Node modules
 /node_modules/
 
-# React Router
-/.react-router/
+# Build and cache output
 /build/
+/dist/
+.cache/
+.next/
+.out/
+
+# Environment variables
+.env
+.env.*  # .env.local, .env.development, etc.
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS and system files
+.DS_Store
+Thumbs.db
+
+# WebStorm / IntelliJ IDEA
+.idea/
+*.iml
+
+# React Router cache (if applicable)
+/.react-router/
+
+# Coverage reports
+/coverage/
+
+# Misc
+*.local
+*.swo
+*.swp

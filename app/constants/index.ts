@@ -1,5 +1,6 @@
 import type { AxisModel } from "@syncfusion/ej2-react-charts";
 import { formatDate } from "lib/utils";
+import { supabase } from "~/supabase/client";
 
 export const sidebarItems = [
   {
@@ -12,13 +13,13 @@ export const sidebarItems = [
     id: 3,
     icon: "/assets/icons/users.svg",
     label: "All Users",
-    href: "/all-users",
+    href: "/dashboard/all-users",
   },
   {
     id: 4,
     icon: "/assets/icons/itinerary.svg",
     label: "AI Trips",
-    href: "/trips",
+    href: "/dashboard/trips",
   },
 ];
 

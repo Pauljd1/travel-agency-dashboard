@@ -6,9 +6,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import { registerLicense } from "@syncfusion/ej2-base";
 
 import type { Route } from "./+types/root";
 import "./app.css";
+
+// Register Syncfusion license
+registerLicense(import.meta.env.VITE_SYNCFUSION_LICENSE_KEY);
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -73,6 +77,3 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     </main>
   );
 }
-import { registerLicense } from "@syncfusion/ej2-base";
-
-registerLicense(import.meta.env.VITE_SYNCFUSION);
